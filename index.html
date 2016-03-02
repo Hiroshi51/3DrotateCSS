@@ -1,0 +1,125 @@
+<style>
+.stage{
+	-webkit-perspective:400;
+	-ms-perspective:400;
+	-o-perspective:400;
+	-moz-perspective:400;
+	width:100px;
+	margin:0 auto;
+
+}
+
+.cube{
+	width:100px;
+	height:100px;
+	position:relative;
+	margin:0 auto;
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition:all 1s;
+	-o-transition:all 1s;
+	transition:all 1s;
+}
+
+.cube div{
+	height:100px;
+	width: 100px;
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+}
+/*.stage:hover .cube{
+ -webkit-transform: rotateY(360deg);
+ -ms-transform: rotateY(360deg);
+ -o-transform: rotateY(360deg);
+ transform: rotateY(360deg);
+}*/
+
+.stage:hover .cube{
+ -webkit-transform: rotateX(-360deg);
+ -ms-transform: rotateX(-360deg);
+ -o-transform: rotateX(-360deg);
+ transform: rotateX(-360deg);
+}
+
+.side_top{
+	background: rgba(0,0,0,0.7);
+	top:-50px;
+	left:0;
+	-webkit-transform:rotateX(90deg);
+	-ms-transform:rotateX(90deg);
+	-o-transform:rotateX(90deg);
+	transform: rotateX(90deg);
+
+}
+
+.side_bottom{
+	background: rgba(0,0,0,0.7);
+	top:50px;
+	left:0;
+	-webkit-transform:rotateX(-90deg);
+	-ms-transform:rotateX(-90deg);
+	-o-transform:rotateX(-90deg);
+	transform: rotateX(-90deg);
+
+}
+
+.side_front{
+	background: rgba(215,0,81,0.7);
+	top:0px;
+	left:0;
+	-webkit-transform:translateZ(50px);
+	-ms-transform:translateZ(50px);
+	-o-transform:translateZ(50px);
+	transform: translateZ(50px);
+
+}
+
+.side_back{
+	background: rgba(215,0,81,0.7);
+	top:0px;
+	left:0;
+	-webkit-transform:translateZ(-50px);
+	-ms-transform:translateZ(-50px);
+	-o-transform:translateZ(-50px);
+	transform: translateZ(-50px);
+
+}
+.side_right{
+	background: rgba(0,160,233,0.7);
+	top:0px;
+	right:-50px;
+	-webkit-transform:rotateY(90deg);
+	-ms-transform:rotateY(90deg);
+	-o-transform:rotateY(90deg);
+	transform:rotateY(90deg);
+
+}
+.side_left{
+	background: rgba(0,160,233,0.7);
+	top:0px;
+	left:-50px;
+	-webkit-transform:rotateY(90deg);
+	-ms-transform:rotateY(90deg);
+	-o-transform:rotateY(90deg);
+	transform:rotateY(90deg);
+
+}
+
+
+</style>
+
+
+<div class="stage">
+ <div class="cube">
+  <div class="side_bottom">BOTTOM</div>
+  <div class="side_top">TOP</div>
+  <div class="side_back">BACK</div>
+  <div class="side_right">RIGHT</div>
+  <div class="side_left">LEFT</div>
+  <div class="side_front">FRONT</div>
+ </div>
+</div>  
